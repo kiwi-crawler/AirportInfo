@@ -1,0 +1,144 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "AirportInfo"
+    },
+    "designerId": "9de3e3bd-91e2-40a3-b6dd-1d665911de29",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id",
+                "type": "int"
+            },
+            "designerId": "d8df0f9d-26aa-40ea-90ca-7ae6dbbb7716"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "beginTime",
+                "type": "string"
+            },
+            "designerId": "cf07ee34-a0e5-445e-86e3-49516a276390"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "endTime",
+                "type": "string"
+            },
+            "designerId": "367e4126-1f63-4275-855a-dc7151ed0a19"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "airNo",
+                "type": "string"
+            },
+            "designerId": "46b32a84-57ed-4df0-afb1-1da08c8d32d1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "airCom",
+                "type": "string"
+            },
+            "designerId": "d82ffa1f-d983-47ac-b0cd-a51a507c8c63"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "terminal",
+                "type": "string"
+            },
+            "designerId": "ebec593d-d8de-4849-bd6c-ec2fdf175799"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "destination",
+                "type": "string"
+            },
+            "designerId": "798be95e-76c2-4c95-90cb-41f185717cc8"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "counter",
+                "type": "string"
+            },
+            "designerId": "2d72d8b4-3648-457d-8d77-6efc67199d43"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "status",
+                "type": "string"
+            },
+            "designerId": "494f9a22-dbb6-4f1f-8a99-a4205d4dc003"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "subAirNo",
+                "type": "string"
+            },
+            "designerId": "1921a1b9-4432-409f-8eca-51ca7cc5d174"
+        }
+    ]
+}

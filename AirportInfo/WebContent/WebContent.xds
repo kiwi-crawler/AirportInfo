@@ -1,0 +1,60 @@
+{
+    "name": "WebContent",
+    "settings": {},
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 991,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "ext42",
+    "topInstanceFileMap": {
+        "a63ab264-6bab-4e4e-959e-aefc53acab03": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "d93d4bdc-6eef-41a1-a42a-e8a0314ab544": {
+            "paths": [
+                "metadata/view/MyViewport",
+                "app/view/override/MyViewport.js",
+                "app/view/MyViewport.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "MyViewport"
+        },
+        "e7d8540c-ac18-4c43-9437-81e5d9b124be": {
+            "paths": [
+                "metadata/store/AirportInfoList",
+                "app/store/override/AirportInfoList.js",
+                "app/store/AirportInfoList.js"
+            ],
+            "className": "AirportInfoList"
+        },
+        "9de3e3bd-91e2-40a3-b6dd-1d665911de29": {
+            "paths": [
+                "metadata/model/AirportInfo",
+                "app/model/override/AirportInfo.js",
+                "app/model/AirportInfo.js"
+            ],
+            "className": "AirportInfo"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "d93d4bdc-6eef-41a1-a42a-e8a0314ab544"
+        ],
+        "store": [
+            "e7d8540c-ac18-4c43-9437-81e5d9b124be"
+        ],
+        "controller": [],
+        "model": [
+            "9de3e3bd-91e2-40a3-b6dd-1d665911de29"
+        ],
+        "resource": [
+            "a63ab264-6bab-4e4e-959e-aefc53acab03"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

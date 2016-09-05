@@ -1,0 +1,504 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyViewport",
+        "designer|initialView": true,
+        "layout": "border"
+    },
+    "designerId": "d93d4bdc-6eef-41a1-a42a-e8a0314ab544",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "north",
+                "border": false,
+                "height": 60,
+                "designer|displayName": "AirportTop",
+                "header": false,
+                "title": "My Panel"
+            },
+            "designerId": "4bd99d1f-3750-4353-a9ee-f1a147cddd60",
+            "cn": [
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": null,
+                        "height": 60,
+                        "maxHeight": 60,
+                        "maxWidth": 480,
+                        "width": 480,
+                        "designer|displayName": "airprot-left",
+                        "imgCls": "icon-airport-top-left"
+                    },
+                    "designerId": "5f34f28a-1da6-42fd-90d0-ad45878688ff"
+                },
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": null,
+                        "weight": null,
+                        "height": 60,
+                        "maxHeight": 60,
+                        "maxWidth": 430,
+                        "width": 430,
+                        "designer|displayName": "airport-right",
+                        "imgCls": "icon-airport-top-right"
+                    },
+                    "designerId": "48da0b21-2eb7-4060-ae9c-88290b86ea48"
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "viewConfig": [
+                    "{\r",
+                    "    loadMask:false,\r",
+                    "    stripeRows: false,\r",
+                    "\tgetRowClass:function(record,rowIndex,rowParams,store){\r",
+                    "        if(rowIndex % 2 ==0) {\r",
+                    "        \treturn 'x-grid-row custom-grid-row x-grid-row-lightblue';\r",
+                    "        } else {\r",
+                    "            return 'x-grid-row custom-grid-row x-grid-row-deepblue';\r",
+                    "        }\r",
+                    "    // 在这里添加自定样式 改变这个表格的行高\r",
+                    "        //return 'x-grid-row custom-grid-row';\r",
+                    "\t}\r",
+                    "}"
+                ],
+                "layout|region": "center",
+                "border": false,
+                "id": "AirportInfo",
+                "designer|displayName": "AirportInfo",
+                "bodyBorder": true,
+                "header": false,
+                "title": null,
+                "store": "AirportInfoList"
+            },
+            "configAlternates": {
+                "viewConfig": "object"
+            },
+            "designerId": "97b07087-cb07-4cc3-86bd-8e9a238d8f5e",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "viewConfig",
+                    "type": "string"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "width": null,
+                        "align": "center",
+                        "dataIndex": "destination",
+                        "text": "目的地<br><br>DEPATURE",
+                        "flex": 2.5
+                    },
+                    "designerId": "d43a7d3c-a332-4fa3-99c0-452d014d745a",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "renderer",
+                                "designer|params": [
+                                    "value",
+                                    "metaData",
+                                    "record",
+                                    "rowIndex",
+                                    "colIndex",
+                                    "store",
+                                    "view"
+                                ],
+                                "implHandler": [
+                                    "value = '<br/>' + value;\r",
+                                    "if(rowIndex % 2 === 0) {\r",
+                                    "    metaData.css='x-grid-row-lightblue'; \r",
+                                    "    return \"<span style='color:#FFF;font-size:15px;font-family:微软雅黑;'>\"+value+\"</span>\";\r",
+                                    "}else {\r",
+                                    "    metaData.css='x-grid-row-deepblue'; \r",
+                                    "    return \"<span style='color:#FFF;font-size:15px;font-family:微软雅黑;'>\"+value+\"</span>\";\r",
+                                    "}"
+                                ]
+                            },
+                            "designerId": "64b399bc-95c3-4a52-932f-b1323230c77b"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "width": null,
+                        "dataIndex": "airCom",
+                        "text": "航空公司<BR><br>CARRIER",
+                        "flex": 4
+                    },
+                    "designerId": "d1f6df0f-1b4b-4b86-a8e3-1698b3b771ff",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "renderer",
+                                "designer|params": [
+                                    "value",
+                                    "metaData",
+                                    "record",
+                                    "rowIndex",
+                                    "colIndex",
+                                    "store",
+                                    "view"
+                                ],
+                                "implHandler": [
+                                    "var tmp = value.split(\"#\");\r",
+                                    "var img = tmp[0];\r",
+                                    "var cpy = tmp[1];\r",
+                                    "var src = \"<img src=\\\"\" + window.location.href + \"resources/airportimg/\" + img + \"\\\">\";\r",
+                                    "if(rowIndex % 2 === 0) {\r",
+                                    "    metaData.css='x-grid-row-lightblue-cmpy img'; \r",
+                                    "    return src + \"<span style='color:#FFF;font-size:15px;font-family:微软雅黑;'>\"+cpy+\"</span>\";\r",
+                                    "}else {\r",
+                                    "    metaData.css='x-grid-row-deepblue-cmpy img'; \r",
+                                    "    return src + \"<span style='color:#FFF;font-size:15px;font-family:微软雅黑;'>\"+cpy+\"</span>\";\r",
+                                    "}"
+                                ]
+                            },
+                            "designerId": "2c542608-2a18-4819-9190-d2a36250f4d3"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "width": null,
+                        "align": "center",
+                        "dataIndex": "airNo",
+                        "tdCls": null,
+                        "text": "航班号<BR><br>FLIGHT＃",
+                        "flex": 2
+                    },
+                    "designerId": "e7133ac0-cea8-400d-abee-e75e7604c8fd",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "renderer",
+                                "designer|params": [
+                                    "value",
+                                    "metaData",
+                                    "record",
+                                    "rowIndex",
+                                    "colIndex",
+                                    "store",
+                                    "view"
+                                ],
+                                "implHandler": [
+                                    "value = '<br/>' + value;\r",
+                                    "if(rowIndex % 2 === 0) {\r",
+                                    "    metaData.css='x-grid-row-lightblue'; \r",
+                                    "    return \"<span style='color:#FFF;font-size:15px;font-family:微软雅黑;'>\"+value+\"</span>\";\r",
+                                    "}else {\r",
+                                    "    metaData.css='x-grid-row-deepblue'; \r",
+                                    "    return \"<span style='color:#FFF;font-size:15px;font-family:微软雅黑;'>\"+value+\"</span>\";\r",
+                                    "}"
+                                ]
+                            },
+                            "designerId": "036ce525-e29b-4501-8df8-2a6280fce763"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "width": null,
+                        "align": "center",
+                        "dataIndex": "subAirNo",
+                        "tdCls": null,
+                        "text": "共享代码<BR><br>PARTNER",
+                        "flex": 5
+                    },
+                    "designerId": "5906bb53-a82a-4498-957b-78b1707e5933",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "renderer",
+                                "designer|params": [
+                                    "value",
+                                    "metaData",
+                                    "record",
+                                    "rowIndex",
+                                    "colIndex",
+                                    "store",
+                                    "view"
+                                ],
+                                "implHandler": [
+                                    "value = '<br/>' + value;\r",
+                                    "if(rowIndex % 2 === 0) {\r",
+                                    "    metaData.css='x-grid-row-lightblue'; \r",
+                                    "\r",
+                                    "    return \"<span style='color:#FFF;font-size:15px;font-family:微软雅黑;'>\"+value+\"</span>\";\r",
+                                    "}else {\r",
+                                    "    metaData.css='x-grid-row-deepblue'; \r",
+                                    "    return \"<span style='color:#FFF;font-size:15px;font-family:微软雅黑;'>\"+value+\"</span>\";\r",
+                                    "}"
+                                ]
+                            },
+                            "designerId": "19c48dd8-9919-4d65-a2f4-6af04ac3cd42"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "width": null,
+                        "align": "center",
+                        "dataIndex": "counter",
+                        "text": "值机柜台<BR><br>CHECK-IN COUNTER",
+                        "flex": 3
+                    },
+                    "designerId": "a4dea188-f087-4571-a5d4-c28eef02cce6",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "renderer",
+                                "designer|params": [
+                                    "value",
+                                    "metaData",
+                                    "record",
+                                    "rowIndex",
+                                    "colIndex",
+                                    "store",
+                                    "view"
+                                ],
+                                "implHandler": [
+                                    "value = '<br/>' + value;\r",
+                                    "if(rowIndex % 2 === 0) {\r",
+                                    "    metaData.css='x-grid-row-lightblue'; \r",
+                                    "    return \"<span style='color:#FFF;font-size:15px;font-family:微软雅黑;'>\"+value+\"</span>\";\r",
+                                    "}else {\r",
+                                    "    metaData.css='x-grid-row-deepblue'; \r",
+                                    "    return \"<span style='color:#FFF;font-size:15px;font-family:微软雅黑;'>\"+value+\"</span>\";\r",
+                                    "}"
+                                ]
+                            },
+                            "designerId": "63ae4ff6-914d-40e4-823c-6a13801b93d4"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "width": null,
+                        "align": "center",
+                        "dataIndex": "beginTime",
+                        "text": "起飞时间<br><br>TIME",
+                        "flex": 2
+                    },
+                    "designerId": "f594fe1a-0278-4393-99f8-daeaee7637cc",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "renderer",
+                                "designer|params": [
+                                    "value",
+                                    "metaData",
+                                    "record",
+                                    "rowIndex",
+                                    "colIndex",
+                                    "store",
+                                    "view"
+                                ],
+                                "implHandler": [
+                                    "value = '<br/>' + value;\r",
+                                    "if(rowIndex % 2 === 0) {\r",
+                                    "    metaData.css='x-grid-row-lightblue'; \r",
+                                    "    return \"<span style='color:#FFF;font-size:15px;font-family:微软雅黑;'>\"+value+\"</span>\";\r",
+                                    "}else {\r",
+                                    "    metaData.css='x-grid-row-deepblue'; \r",
+                                    "    return \"<span style='color:#FFF;font-size:15px;font-family:微软雅黑;'>\"+value+\"</span>\";\r",
+                                    "}"
+                                ]
+                            },
+                            "designerId": "54d53c33-87c1-42d0-b9d4-4bd2fddd7b8f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "width": null,
+                        "align": "center",
+                        "dataIndex": "status",
+                        "text": "状态<BR><br>STATUS",
+                        "flex": 2.5
+                    },
+                    "designerId": "b3543c6e-cbdd-4489-a001-6885b88c25ff",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "renderer",
+                                "designer|params": [
+                                    "value",
+                                    "metaData",
+                                    "record",
+                                    "rowIndex",
+                                    "colIndex",
+                                    "store",
+                                    "view"
+                                ],
+                                "implHandler": [
+                                    "\r",
+                                    "if(value === \"\") {\r",
+                                    "    value = \"准时\";\r",
+                                    "}\r",
+                                    "value = '<br/>' + value;\r",
+                                    "if(rowIndex % 2 === 0) {\r",
+                                    "    metaData.css='x-grid-row-lightblue'; \r",
+                                    "    return \"<span style='color:#FFF;font-size:15px;font-family:微软雅黑;'>\"+value+\"</span>\";\r",
+                                    "}else {\r",
+                                    "    metaData.css='x-grid-row-deepblue'; \r",
+                                    "    return \"<span style='color:#FFF;font-size:15px;font-family:微软雅黑;'>\"+value+\"</span>\";\r",
+                                    "}"
+                                ]
+                            },
+                            "designerId": "e039c7b1-48cd-4578-8add-8ab6dfb016d9"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "61439474-8e99-4551-ad99-1fdb7a23b7b8"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onAirportInfoAfterRender",
+                        "implHandler": [
+                            "var elments = Ext.select(\".x-column-header\",true);//.x-grid3-hd\r",
+                            "elments.each(function(el) {\r",
+                            "    el.setStyle(\"color\", '#FFFFFF');\r",
+                            "    el.setStyle(\"background\", '#171C60');\r",
+                            "    el.setStyle(\"font-family\", '微软雅黑');\r",
+                            "    el.setStyle(\"font-size\", '15px');\r",
+                            "    el.setStyle(\"height\", '50px');\r",
+                            "    el.setStyle(\"text-align\", 'center');\r",
+                            "}, this);"
+                        ],
+                        "name": "afterrender",
+                        "scope": "me"
+                    },
+                    "designerId": "a18ca5a3-766f-4cd2-8f50-fddaaccd29ba"
+                }
+            ]
+        }
+    ]
+}

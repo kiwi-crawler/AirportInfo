@@ -1,0 +1,53 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "timeout": "100000000",
+        "autoLoad": false,
+        "model": "AirportInfo",
+        "storeId": "AirportInfoList",
+        "designer|userClassName": "AirportInfoList"
+    },
+    "designerId": "e7d8540c-ac18-4c43-9437-81e5d9b124be",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "timeout",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "ajaxProxy",
+                "url": "AirportInfo/getAll.action"
+            },
+            "designerId": "e7c013e4-22dd-489d-bebc-bcfcf35e8991",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "data",
+                        "designer|displayName": "jsonReader"
+                    },
+                    "designerId": "8976e49f-79ee-4f48-a135-e6d3d1aafbd0"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "AirportInfo"
+        ],
+        "stores": [
+            "AirportInfoList"
+        ],
+        "views": [
+            "MyViewport"
+        ],
+        "autoCreateViewport": true,
+        "name": "MyApp"
+    },
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "var airportInfo = Ext.getCmp('AirportInfo');\r",
+                    "\r",
+                    "var airportInfoList = airportInfo.getStore();\r",
+                    "var task = {\r",
+                    "    run : function() {\r",
+                    "        airportInfoList.reload();  \r",
+                    "    },  \r",
+                    "    interval : 10000\r",
+                    "}\r",
+                    "Ext.TaskManager.start(task); "
+                ]
+            },
+            "designerId": "cf9737dc-61bf-49a5-8772-164b799a5563"
+        }
+    ]
+}
